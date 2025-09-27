@@ -3143,10 +3143,10 @@ input, select, textarea {
 
 	}
 .profile-pic {
-    width: 120px;           /* size of the circle */
-    height: 120px;          /* square to make circle */
-    object-fit: cover;      /* crop without stretching */
-    border-radius: 50%;     /* make circular */
-    display: block;         /* allows margin auto */
-    margin: 0 auto 15px;    /* center horizontally and add spacing */
+    width: 120px !important;        /* force width */
+    height: 120px !important;       /* force height */
+    object-fit: cover !important;   /* crop without stretching */
+    border-radius: 50% !important;  /* make circular */
+    display: block !important;      /* allow margin auto */
+    margin: 0 auto 15px !important; /* center horizontally */
 }
