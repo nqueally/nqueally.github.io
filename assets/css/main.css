@@ -3150,3 +3150,44 @@ input, select, textarea {
     display: block !important;      /* allow margin auto */
     margin: 0 auto 15px !important; /* center horizontally */
 }
+/* Header arrow styling to mirror the “About Me” section arrow */
+#header {
+  position: relative;
+  overflow: hidden; /* in case image flows */
+}
+
+#header > .goto-next.scrolly {
+  position: absolute;
+  bottom: 2rem;            /* adjust as needed so arrow is a bit above bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3.5rem;            /* match the arrow circle size on other sections */
+  height: 3.5rem;
+  background: rgba(255, 255, 255, 0.8); /* semi-white circle background */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-indent: -9999px;     /* hide any inner text if accidentally left */
+  transition: background 0.2s ease;
+  z-index: 10;
+}
+
+/* The arrow icon itself — using same pseudo-element trick as in template */
+#header > .goto-next.scrolly::after {
+  content: '';
+  display: block;
+  width: 1rem;   /* arrow arrow size */
+  height: 1rem;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: rotate(45deg);
+  /* adjust color if needed (dark arrow) */
+  margin-left: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Optional: arrow hover effect */
+#header > .goto-next.scrolly:hover {
+  background: rgba(255, 255, 255, 1);
+}
